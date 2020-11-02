@@ -123,8 +123,8 @@ purple_urchins_site_yr
 b.iii. Make an exploratory graph of counts of purple urchins recorded at each site over time for the years included in the study.
 
 ```{r}
-ggplot(data = purple_urchins_site_yr, aes(x = urchin_year, y = n, color = site_full))+
-  geom_col()+
+ggplot(data = purple_urchins_site_yr, aes(x = urchin_year, y = n))+
+  geom_col(fill = "purple")+
   facet_wrap(~site_full)+
   labs(x = "Year of Observation", y = "Number of Purple Urchins")+
   theme_gray()
