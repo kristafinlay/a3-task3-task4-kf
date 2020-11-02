@@ -714,7 +714,6 @@ Red Urchin
 
 purple_urchins &lt;- clean_urchins %&gt;% 
   filter(common_name == &quot;Purple Urchin&quot;) %&gt;% 
-  mutate(Date = (date)) %&gt;% 
   mutate(date_new = mdy(date)) %&gt;% 
   mutate(urchin_year = year(date_new)) %&gt;% 
   mutate(site_full = case_when(site == &quot;NAPL&quot; ~&quot;Naples Reef&quot;, site == &quot;AQUE&quot; ~&quot;Arroyo Quemado Reef&quot;,

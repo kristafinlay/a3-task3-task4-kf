@@ -98,7 +98,6 @@ clean_urchins <- urchin_data %>%
 
 purple_urchins <- clean_urchins %>% 
   filter(common_name == "Purple Urchin") %>% 
-  mutate(Date = (date)) %>% 
   mutate(date_new = mdy(date)) %>% 
   mutate(urchin_year = year(date_new)) %>% 
   mutate(site_full = case_when(site == "NAPL" ~"Naples Reef", site == "AQUE" ~"Arroyo Quemado Reef",
